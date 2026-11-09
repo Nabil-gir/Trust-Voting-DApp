@@ -27,6 +27,10 @@ restitué sur Sepolia le propriétaire attendu, l'étape 5, trois électeurs,
 quatre propositions, treize événements et l'identifiant gagnant 3. Le RPC
 accepte les requêtes du navigateur avec l'origine du site public.
 
+Le fichier `.vercelignore` limite les envois du CLI au frontend, en excluant
+également ses fichiers `.env`, dépendances et résultats de build. Les fichiers
+reçus par Vercel sont contrôlés via son API en complément de l'arbre GitHub.
+
 Ces contrôles HTTP et RPC ne simulent pas une connexion MetaMask ou un
 appairage WalletConnect dans un navigateur.
 

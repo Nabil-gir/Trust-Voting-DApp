@@ -77,4 +77,6 @@ Les [vérifications effectuées](docs/VALIDATION.md) et les [alertes de dépenda
 
 Utiliser le framework **Next.js**, le dossier racine **`voting-dapp`** et Node.js **24.x**. Les cinq variables publiques sont décrites dans [`voting-dapp/.env.example`](voting-dapp/.env.example). Les clés privées et la clé Etherscan restent côté Hardhat.
 
+Pour un déploiement par CLI, lancer `vercel deploy --prod` depuis la racine du dépôt. Le fichier [`.vercelignore`](.vercelignore) autorise uniquement les sources du frontend et exclut ses fichiers d'environnement : `.gitignore` ne remplace pas cette règle d'envoi Vercel. [Documentation Vercel](https://vercel.com/docs/deployments/vercel-ignore).
+
 Les transitions du contrat sont définitives : un nouveau scrutin nécessite un nouveau déploiement. La démonstration locale et le site hébergé utilisent des contrats distincts.

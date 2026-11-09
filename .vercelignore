@@ -1,0 +1,10 @@
+# Le CLI est lancé depuis la racine ; seul le frontend doit être envoyé.
+/*
+!voting-dapp
+
+# Exclure les configurations locales, dépendances et résultats de compilation.
+voting-dapp/.env*
+voting-dapp/.vercel
+voting-dapp/.next
+voting-dapp/node_modules
+voting-dapp/*.tsbuildinfo
