@@ -8,5 +8,6 @@
     "types": ["node", "mocha"],
     "verbatimModuleSyntax": true
   },
-  "exclude": ["node_modules", "voting-dapp", "DappBank", "nouvelleDappSimple", "frontend", "TestingHardhat"]
+  "include": ["hardhat.config.ts", "scripts/deploy-voting.ts", "ignition/modules/Voting.ts", "test/Voting.ts"],
+  "exclude": ["node_modules", "voting-dapp", "exercices-locaux"]
 }

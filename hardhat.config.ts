@@ -1,6 +1,3 @@
-/* Ces lignes importent les modules nécessaires à partir des packages installés dans votre projet. 
-Ces modules étendent les fonctionnalités de Hardhat pour faciliter diverses tâches telles que 
-la gestion de la configuration. */
 import "dotenv/config";
 import type { HardhatUserConfig } from "hardhat/config";
 
@@ -11,7 +8,7 @@ import hardhatVerify from "@nomicfoundation/hardhat-verify";
 
 const config: HardhatUserConfig = {
   plugins: [hardhatToolboxMochaEthersPlugin, hardhatKeystore, hardhatVerify],
- // ici la configuration de votre API key d'etherscan pour verifier votre contrat
+  // La clé Etherscan est fournie par l'environnement ou le keystore.
   verify: {
     etherscan: {
       apiKey: configVariable("ETHERSCAN_API_KEY"),
@@ -33,18 +30,12 @@ const config: HardhatUserConfig = {
       },
     },
   },
-   // Définit les configurations pour différents réseaux. Dans cet exemple, 
-  // il y a un réseau "sepolia" (chaine de blocs fictive) et un réseau "localhost"
-  // pour le développement en local. Dans Sepolia on peut voir l'usage de deux confifVariable qui vont être cherchées dans le keystore
+  // Démonstration locale et réseau de test public Sepolia.
   networks: {
     hardhatMainnet: {
       type: "edr-simulated",
       chainType: "l1",
       chainId: 31337,
-    },
-    hardhatOp: {
-      type: "edr-simulated",
-      chainType: "op",
     },
     sepolia: {
       type: "http",

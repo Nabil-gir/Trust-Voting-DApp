@@ -9,9 +9,10 @@ Utiliser une version de Node.js prise en charge par Hardhat 3 et Next.js. Les d�
 ```powershell
 npm.cmd ci
 npm.cmd --prefix voting-dapp ci
+Copy-Item voting-dapp/.env.example voting-dapp/.env.local
 ```
 
-Sous Windows PowerShell, `npm.cmd` évite le blocage éventuel de `npm.ps1` par la politique d'exécution.
+Sous Windows PowerShell, `npm.cmd` évite le blocage éventuel de `npm.ps1` par la politique d'exécution. Copier le fichier d'exemple uniquement à la première installation : il configure le contrat Sepolia existant. Un identifiant Reown peut être ajouté dans `.env.local` pour WalletConnect.
 
 Le projet Hardhat configure Solidity **0.8.38**, version exigée par le pragma existant de `Voting.sol`. Le premier build télécharge le compilateur si nécessaire.
 
@@ -104,13 +105,13 @@ Le script de déploiement actualise uniquement les quatre premières variables c
 
 Les variables `NEXT_PUBLIC_*` sont exposées au navigateur. N'y placer aucune clé privée. Pour choisir un autre RPC public lors du déploiement, définir `NEXT_PUBLIC_RPC_URL` dans le terminal qui lance le script. Redémarrer Next.js après une modification de configuration ; pour une version de production, refaire également le build.
 
-Le script utilise `http://127.0.0.1:8545` en local et, par défaut, `https://ethereum-sepolia-rpc.publicnode.com` pour la lecture publique de Sepolia. Il ne copie pas le RPC privé de déploiement vers le navigateur.
+Le script utilise `http://127.0.0.1:8545` en local et, par défaut, `https://sepolia.gateway.tenderly.co` pour la lecture publique de Sepolia. Il ne copie pas le RPC privé de déploiement vers le navigateur. Le RPC doit conserver l'historique des événements depuis le bloc de déploiement ; une réponse « pruned history unavailable » empêche de reconstruire le scrutin.
 
 ## Déploiement Sepolia, à lancer explicitement
 
 Le contrat Sepolia actuel est déjà déployé à l'adresse [`0x139a9158e889E0aA584709E053CA1BFF03E40845`](https://sepolia.etherscan.io/address/0x139a9158e889E0aA584709E053CA1BFF03E40845), au bloc `12086200`. Le propriétaire est `0x7745C2b7A0a3f0cE2Bb4f9A23D732CF1fB7B7d30`. Pour l'utiliser, lancer `npm.cmd run dapp:dev` depuis la racine. Les étapes de déploiement suivantes concernent la création d'un autre scrutin.
 
-Le RPC Infura de déploiement est configuré dans le fichier `.env` à la racine, sous `SEPOLIA_RPC_URL`. `hardhat.config.ts` charge ce fichier avec `dotenv/config`. Il est ignoré par Git et son URL n'est pas copiée dans le frontend. Une variable d'environnement portant ce nom prend la priorité sur la valeur enregistrée dans le keystore.
+Le RPC de déploiement peut être configuré dans le fichier `.env` à la racine, sous `SEPOLIA_RPC_URL`. Le fichier `.env.example` indique les noms des variables. `hardhat.config.ts` charge `.env` avec `dotenv/config`. Il est ignoré par Git et son URL n'est pas copiée dans le frontend. Une variable d'environnement portant ce nom prend la priorité sur la valeur enregistrée dans le keystore.
 
 Si `SEPOLIA_PRIVATE_KEY` est déjà enregistrée dans le keystore de production, il suffit de lancer la commande de déploiement ci-dessous et de saisir le mot de passe du keystore dans le terminal. Il n'est pas nécessaire de réenregistrer la clé. Ne transmettre ni ce mot de passe ni la clé dans une conversation.
 

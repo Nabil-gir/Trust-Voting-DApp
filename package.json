@@ -1,10 +1,12 @@
 {
-  "name": "Hardhat",
+  "name": "trust-voting-contracts",
   "version": "1.0.0",
+  "private": true,
   "type": "module",
   "scripts": {
     "build": "hardhat build",
     "typecheck": "tsc --noEmit",
+    "test": "hardhat test mocha test/Voting.ts",
     "test:voting": "hardhat test mocha test/Voting.ts",
     "voting:abi": "hardhat build && node scripts/sync-voting-abi.mjs",
     "voting:node": "hardhat node --network hardhatMainnet --hostname 127.0.0.1",

@@ -1,4 +1,4 @@
-# Vérification de la DApp Agora
+# Vérification de la DApp Trust
 
 Vérifications réalisées le 7 novembre 2026 dans ce dépôt, sous Windows avec Node.js 24.22.0. Les résultats ci-dessous correspondent aux commandes exécutées pendant la réalisation, et non à une certification de sécurité.
 
@@ -28,7 +28,7 @@ Versions installées relevées : Next.js 16.4.5, React 19.3.1, Tailwind CSS 4.3.
 
 Le service de contrôle du navigateur et le service Windows Computer Use étaient indisponibles. Il n’y a donc pas eu de vérification visuelle interactive, d’import de compte MetaMask, d’appairage WalletConnect réel ou de signature depuis une extension utilisateur. Les contrôles HTTP ne remplacent pas ces essais. L’identifiant Reown est configuré ; son acceptation effective par le service n’a pas été vérifiée.
 
-L’audit de dépendances conserve des alertes transitives documentées dans [`DEPENDENCIES.md`](DEPENDENCIES.md). Aucun déploiement Vercel ni autre hébergement public du frontend n’a été effectué. Le contrat a ensuite été déployé sur Sepolia, comme indiqué ci-dessous.
+L’audit de dépendances conserve des alertes transitives documentées dans [`DEPENDENCIES.md`](DEPENDENCIES.md). Les contrôles du 7 novembre précèdent le déploiement du frontend sur Vercel le 9 novembre. Le contrat a également été déployé sur Sepolia, comme indiqué ci-dessous.
 
 ## Déploiement Sepolia confirmé
 

@@ -59,7 +59,16 @@ L’administrateur n’a pas besoin de voter pour cette démo. S’il doit aussi
 
 Arrêtez `dapp:demo` avec `Ctrl+C`, puis relancez la commande. Le nœud Hardhat local repartira avec un nouveau scrutin. L’état du précédent scrutin local est perdu : c’est attendu.
 
-Pour revenir au contrat Sepolia déjà configuré après la démo, arrêtez le processus, puis lancez :
+Pour revenir au contrat Sepolia après la démo, arrêtez le processus. Le lanceur a remplacé la configuration locale : dans `voting-dapp/.env.local`, remettez les quatre valeurs suivantes en conservant votre identifiant Reown :
+
+```dotenv
+NEXT_PUBLIC_CHAIN_ID=11155111
+NEXT_PUBLIC_VOTING_ADDRESS=0x139a9158e889E0aA584709E053CA1BFF03E40845
+NEXT_PUBLIC_DEPLOYMENT_BLOCK=12086200
+NEXT_PUBLIC_RPC_URL=https://sepolia.gateway.tenderly.co
+```
+
+Puis relancez :
 
 ```powershell
 npm.cmd run dapp:dev

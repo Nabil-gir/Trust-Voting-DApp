@@ -16,7 +16,9 @@ Le compte administrateur est `0x7745C2b7A0a3f0cE2Bb4f9A23D732CF1fB7B7d30`. Il do
 
 Pour la démonstration du devoir sur Hardhat local, lancer `npm.cmd run dapp:demo` depuis la racine. Cette commande affiche les comptes de développement dans le terminal, démarre le nœud, déploie un contrat et configure le frontend pour ce nouveau scrutin. Le [tutoriel de démonstration locale](../docs/DEMO-LOCALE.md) indique les clics à effectuer avec un compte administrateur et un compte électeur.
 
-Le [guide complet](../docs/VOTING-DAPP.md) explique l’installation, les comptes de développement, les six étapes du scrutin et la configuration de Sepolia. Le [suivi des dépendances](../docs/DEPENDENCIES.md) décrit les correctifs et les alertes restantes. Aucun hébergement Vercel n’a été effectué.
+Le [guide complet](../docs/VOTING-DAPP.md) explique l’installation, les comptes de développement, les six étapes du scrutin et la configuration de Sepolia. Le [suivi des dépendances](../docs/DEPENDENCIES.md) décrit les correctifs et les alertes restantes.
+
+Application publique : https://trust-voting-dapp.vercel.app. Sur Vercel, le framework est **Next.js**, le dossier racine est **`voting-dapp`** et la version de Node.js est **24.x**. Les variables publiques sont configurées dans le projet Vercel ; les fichiers locaux `.env` ne sont pas publiés.
 
 ## Commandes du frontend
 

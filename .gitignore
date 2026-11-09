@@ -38,3 +38,12 @@
 /CLAUDE.md
 /TestingHardhat/
 /ignition/deployments/
+
+# Exercices conservés uniquement sur cet ordinateur
+/exercices-locaux/
+/DappBank/
+/frontend/
+/nouvelleDappSimple/
+
+# Liaison locale avec Vercel
+.vercel/

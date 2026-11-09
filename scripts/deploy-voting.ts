@@ -41,7 +41,7 @@ try {
   }
 
   const publicRpcUrl = process.env.NEXT_PUBLIC_RPC_URL ?? (
-    chainId === 31337n ? "http://127.0.0.1:8545" : "https://ethereum-sepolia-rpc.publicnode.com"
+    chainId === 31337n ? "http://127.0.0.1:8545" : "https://sepolia.gateway.tenderly.co"
   );
   const publicValues: Record<string, string> = {
     NEXT_PUBLIC_CHAIN_ID: chainId.toString(),

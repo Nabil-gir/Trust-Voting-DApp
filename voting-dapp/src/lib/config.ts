@@ -26,6 +26,6 @@ export const wagmiConfig = createConfig({
   ssr: true,
   transports: {
     [hardhat.id]: http(targetChain.id === hardhat.id ? process.env.NEXT_PUBLIC_RPC_URL || "http://127.0.0.1:8545" : "http://127.0.0.1:8545"),
-    [sepolia.id]: http(targetChain.id === sepolia.id ? process.env.NEXT_PUBLIC_RPC_URL || sepolia.rpcUrls.default.http[0] : sepolia.rpcUrls.default.http[0]),
+    [sepolia.id]: http(targetChain.id === sepolia.id ? process.env.NEXT_PUBLIC_RPC_URL || "https://sepolia.gateway.tenderly.co" : "https://sepolia.gateway.tenderly.co"),
   },
 });
