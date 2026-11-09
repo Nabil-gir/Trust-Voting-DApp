@@ -1,5 +1,37 @@
 # Vérification de la DApp Trust
 
+## Contrôle du dépôt et de Vercel — 9 novembre 2026
+
+Les exercices Counter/ERC20, les scripts d'entraînement et leurs tests ont été
+retirés de `main`. Les fichiers locaux ont été conservés dans un dossier
+`exercices-locaux/` ignoré par Git. L'arbre publié du commit
+`f0a9ec30e6121bcf145071caba176028c8f77395` contient 59 fichiers, sans ces
+exercices ni fichiers privés d'environnement.
+
+Vérifications après nettoyage : compilation Hardhat, typecheck du backend,
+49 tests Voting, lint et typecheck du frontend réussis. Les quatre tests
+d'intégration ont réussi sur un nœud Hardhat isolé, port `18545`.
+
+Le projet Vercel utilise désormais le framework Next.js, le dossier racine
+`voting-dapp` et Node.js 24.x. Le build de production et son contrôle TypeScript
+ont réussi sur Vercel. [Application publique](https://trust-voting-dapp.vercel.app).
+Le test HTTP contrôle le titre Trust et refuse toute redirection vers une page
+de connexion : accueil 200, document français, CSS 200, icône 200 et URL inconnue
+404. Le JavaScript public contient l'adresse Sepolia prévue et le RPC configuré.
+
+Le RPC Publicnode a renvoyé « pruned history unavailable » pour le bloc de
+déploiement pendant cette revue. Le RPC public utilisé est maintenant
+`https://sepolia.gateway.tenderly.co`. Les cinq variables de production ont été
+contrôlées après lecture depuis Vercel. Le lecteur réel de l'application a
+restitué sur Sepolia le propriétaire attendu, l'étape 5, trois électeurs,
+quatre propositions, treize événements et l'identifiant gagnant 3. Le RPC
+accepte les requêtes du navigateur avec l'origine du site public.
+
+Ces contrôles HTTP et RPC ne simulent pas une connexion MetaMask ou un
+appairage WalletConnect dans un navigateur.
+
+## Historique des contrôles initiaux
+
 Vérifications réalisées le 7 novembre 2026 dans ce dépôt, sous Windows avec Node.js 24.22.0. Les résultats ci-dessous correspondent aux commandes exécutées pendant la réalisation, et non à une certification de sécurité.
 
 | Contrôle | Résultat |
