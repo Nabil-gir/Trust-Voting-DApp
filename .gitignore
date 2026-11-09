@@ -47,3 +47,8 @@
 
 # Liaison locale avec Vercel
 .vercel/
+
+# Notes locales
+/docs/VALIDATION.md
+/docs/DEMO-LOCALE.md
+/deployments/sepolia/Voting-*.json

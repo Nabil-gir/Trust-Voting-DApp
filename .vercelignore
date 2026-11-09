@@ -8,3 +8,4 @@ voting-dapp/.vercel
 voting-dapp/.next
 voting-dapp/node_modules
 voting-dapp/*.tsbuildinfo
+voting-dapp/AGENTS.md

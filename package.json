@@ -12,6 +12,7 @@
     "voting:node": "hardhat node --network hardhatMainnet --hostname 127.0.0.1",
     "voting:deploy:local": "hardhat run scripts/deploy-voting.ts --network localhost",
     "voting:deploy:sepolia": "hardhat run scripts/deploy-voting.ts --network sepolia --build-profile production",
+    "voting:deploy:wallet": "hardhat build --build-profile production && node scripts/deploy-voting-wallet.mjs",
     "dapp:local": "node scripts/start-voting-local.mjs",
     "dapp:demo": "node scripts/start-voting-demo.mjs",
     "dapp:dev": "npm --prefix voting-dapp run dev",
