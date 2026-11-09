@@ -5,6 +5,8 @@ vote unique, dépouillement et consultation publique des résultats.
 
 **Application :** https://trust-voting-dapp.vercel.app
 
+**Contrat Sepolia :** [0x9644317c96ce808D9E4b61b1c3eF7FbE6cCaA8D8](https://sepolia.etherscan.io/address/0x9644317c96ce808D9E4b61b1c3eF7FbE6cCaA8D8), bloc `12099445`.
+
 ## Technologies
 
 Solidity 0.8.38, Hardhat 3, Next.js, React, TypeScript, Tailwind CSS,

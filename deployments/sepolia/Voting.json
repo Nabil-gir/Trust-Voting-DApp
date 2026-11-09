@@ -1,0 +1,35 @@
+{
+  "network": "sepolia",
+  "chainId": 11155111,
+  "contract": "Voting",
+  "address": "0x9644317c96ce808D9E4b61b1c3eF7FbE6cCaA8D8",
+  "owner": "0x7745C2b7A0a3f0cE2Bb4f9A23D732CF1fB7B7d30",
+  "transactionHash": "0xeb826d4e15aed2aeee94d1f251929c77dfb6f65d02c79becae380fb83134d32a",
+  "blockNumber": 12099445,
+  "blockHash": "0x9dfef5b53121617ff733b97d9f8476231fa4d9c58ec27195aae389ee97a1d4b0",
+  "compiler": "0.8.38",
+  "optimizer": {
+    "enabled": true,
+    "runs": 200
+  },
+  "runtimeBytecodeHash": "0x141640c0bd72716a4f6b5e8547c0bd876fd422703749c79cc614422cae85f386",
+  "verification": {
+    "runtimeBytecodeMatches": true,
+    "ownerMatches": true,
+    "initialWorkflowStatus": 0,
+    "initialWinningProposalId": "0",
+    "ownershipConstructorEvent": true
+  },
+  "frontend": {
+    "chainId": 11155111,
+    "address": "0x9644317c96ce808D9E4b61b1c3eF7FbE6cCaA8D8",
+    "deploymentBlock": 12099445,
+    "rpcUrl": "https://sepolia.gateway.tenderly.co"
+  },
+  "explorers": {
+    "etherscan": {
+      "verified": true,
+      "url": "https://sepolia.etherscan.io/address/0x9644317c96ce808D9E4b61b1c3eF7FbE6cCaA8D8#code"
+    }
+  }
+}
